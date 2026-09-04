@@ -1,0 +1,20 @@
+# Hardware platform configurations
+platforms:
+  raspberry_pi_4b:
+    cpu: Cortex-A72
+    cores: 4
+    ram_gb: 4
+    power_supply: 5V_3A
+    sensor_interfaces: [USB, I2C, SPI]
+    energy_mode: standard
+  jetson_nano:
+    cpu: Cortex-A57
+    cores: 4
+    gpu: Maxwell_128core
+    ram_gb: 4
+    energy_mode: high_energy
+  custom_6g_edge:
+    cpu: Octa-core
+    ram_gb: 8
+    accelerator: dedicated_AI
+    energy_mode: high_energy

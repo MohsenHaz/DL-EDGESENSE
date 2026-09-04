@@ -1,0 +1,13 @@
+# Federated learning config — Section 4.4.8: 20 clients
+defaults:
+  - base_config
+federated:
+  num_clients: 20
+  rounds: 50
+  local_epochs: 5
+  aggregation: fedavg
+  differential_privacy:
+    enabled: true
+    epsilon: 1.0
+    delta: 1.0e-5
+    max_grad_norm: 1.0

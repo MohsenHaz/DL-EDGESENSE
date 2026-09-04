@@ -1,0 +1,9 @@
+# Recovery mode: 412K params, 24.6 mJ, 89.5% acc (Table 12)
+defaults:
+  - base_config
+model:
+  embedding_dim: 96
+hpeq:
+  default_bit_width: 6
+training:
+  lambda_e: 2.0

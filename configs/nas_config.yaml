@@ -1,0 +1,12 @@
+# NAS config — Section 3.9, Equations 19-22
+defaults:
+  - base_config
+nas:
+  search_space:
+    embedding_dims: [32, 64, 128, 256]
+    num_heads: [1, 2, 4, 8]
+    bit_widths: [2, 4, 8, 16]
+    fusion_strategies: [early, hybrid, late]
+  lambda_energy_nas: 0.3
+  search_epochs: 50
+  architecture_lr: 0.003

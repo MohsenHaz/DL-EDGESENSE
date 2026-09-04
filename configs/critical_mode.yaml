@@ -1,0 +1,12 @@
+# Critical mode: 168K params, 9.3 mJ, 82.1% acc (Table 8)
+defaults:
+  - base_config
+model:
+  embedding_dim: 32
+  num_attention_heads: 1
+hpeq:
+  default_bit_width: 2
+training:
+  lambda_e: 5.0
+sensor_activation:
+  max_active_sensors: 2

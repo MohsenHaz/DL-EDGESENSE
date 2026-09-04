@@ -1,0 +1,24 @@
+# Dataset-specific configurations (Table 2)
+datasets:
+  ARID:
+    path: data/raw/ARID
+    modalities: [visual, acoustic, imu]
+    num_subjects: 20
+    num_classes: 12
+    split: [0.70, 0.15, 0.15]
+  EnviroSense:
+    path: data/raw/EnviroSense
+    modalities: [visual, acoustic, environmental]
+    split: [0.70, 0.15, 0.15]
+  SpectrumSense:
+    path: data/raw/SpectrumSense
+    modalities: [rf]
+    split: [0.70, 0.15, 0.15]
+  MultiSense:
+    path: data/raw/MultiSense
+    modalities: [visual, acoustic, rf, environmental, imu]
+    split: [0.70, 0.15, 0.15]
+  Energy-Bench:
+    path: data/raw/EnergyBench
+    modalities: [multi]
+    split: [0.80, 0.10, 0.10]

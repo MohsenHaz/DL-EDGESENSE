@@ -1,0 +1,10 @@
+# Energy-constrained mode: 325K params, 18.7 mJ, 88.3% acc (Table 8)
+defaults:
+  - base_config
+model:
+  embedding_dim: 64
+  num_attention_heads: 2
+hpeq:
+  default_bit_width: 4
+training:
+  lambda_e: 3.0

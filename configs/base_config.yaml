@@ -1,0 +1,54 @@
+# Base configuration for DL-EgSense — all hyperparameters match paper Section 3
+
+model:
+  name: DL-EgSense
+  modalities: [visual, acoustic, imu, environmental, rf]
+  embedding_dim: 128
+  num_attention_heads: 4
+  fusion_strategy: hybrid   # Equation 13
+
+eacma:                       # Section 3.5, Equation 11
+  beta_energy: 0.1
+  energy_feedback: true
+
+hpeq:                        # Section 3.6, Equation 12
+  bit_widths: [1, 2, 4, 8, 16]
+  lambda_energy: 1.0
+  lambda_precision: 0.5
+
+training:                    # Section 3.8, Equations 15-18
+  epochs: 100
+  batch_size: 64
+  learning_rate: 0.001
+  optimizer: adam
+  lambda_e: 1.0
+  lambda_c: 0.1
+  energy_threshold_k: 10
+  energy_threshold_tau: 0.5
+  seeds: [0, 42, 123, 456, 789]
+  early_stopping_patience: 15
+
+sensor_activation:           # Equations 2-3
+  alpha: 1.0
+  beta: 0.5
+
+nas:                         # Section 3.9, Equations 19-22
+  lambda_energy_nas: 0.3
+  search_epochs: 50
+  architecture_lr: 0.003
+
+energy_measurement:
+  sampling_rate_hz: 10000    # INA219 @ 10 kHz
+  warmup_seconds: 60
+  repetitions: 100
+  subtract_idle: true
+
+data:
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+
+evaluation:
+  metrics: [f1_weighted, precision, recall, mAP, MSE]
+  statistical_test: paired_t_bonferroni
+  confidence_interval: 0.95
