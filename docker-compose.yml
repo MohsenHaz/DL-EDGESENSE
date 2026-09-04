@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  dl-egsense:
+    build: .
+    volumes:
+      - ./data:/workspace/DL-EgSense/data
+      - ./results:/workspace/DL-EgSense/results
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
