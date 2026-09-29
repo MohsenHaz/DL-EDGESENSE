@@ -1,0 +1,8 @@
+mode: energy_constrained
+embed_dim: 96
+depth_multiplier: 0.50
+precision: int8
+modalities: [visual, imu, environmental]   # RF/acoustic deprioritised under constraint
+parameters_k: 325
+expected_energy_mj: 18.7
+expected_accuracy_pct: 88.3

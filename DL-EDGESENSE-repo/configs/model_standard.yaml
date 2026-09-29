@@ -1,0 +1,8 @@
+mode: standard
+embed_dim: 128
+depth_multiplier: 0.75
+precision: int8
+modalities: [visual, acoustic, imu, environmental, rf]
+parameters_k: 584
+expected_energy_mj: 32.5
+expected_accuracy_pct: 91.8

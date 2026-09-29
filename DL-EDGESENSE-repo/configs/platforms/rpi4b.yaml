@@ -1,0 +1,6 @@
+name: raspberry_pi_4b
+cpu: quad-core ARM Cortex-A72 @ 1.5GHz
+ram_gb: 4
+governor: performance
+warmup_s: 60
+inference_repetitions: 100

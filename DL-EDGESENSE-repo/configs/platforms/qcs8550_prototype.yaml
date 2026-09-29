@@ -1,0 +1,7 @@
+name: custom_6g_prototype
+cpu: Qualcomm QCS8550 octa-core Kryo (4x Cortex-X4 @ 3.36GHz + 4x Cortex-A720)
+ram_gb: 8
+ram_type: LPDDR5X
+npu: Qualcomm Hexagon (45 TOPS) -- NOT used; all runs are CPU-only for cross-platform fairness
+modem: sub-6GHz 5G/NR, 3GPP Release 18 aligned
+inference_mode: cpu_only

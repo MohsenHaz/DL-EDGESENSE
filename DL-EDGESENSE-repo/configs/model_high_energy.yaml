@@ -1,0 +1,7 @@
+mode: high_energy
+embed_dim: 128
+depth_multiplier: 1.00
+modalities: [visual, acoustic, imu, environmental, rf]
+parameters_k: 846
+expected_energy_mj: 51.0     # RPi 4B, Table 12/13
+expected_accuracy_pct: 92.7

@@ -1,0 +1,12 @@
+# Table S2 / rebuttal round 27-9-2026
+optimizer: AdamW
+learning_rate: 1.0e-3
+lr_schedule: cosine_annealing
+lr_min: 1.0e-5
+max_epochs: 100
+early_stopping_patience: 10
+early_stopping_metric: val_energy_accuracy_ratio
+batch_size_train: 32
+batch_size_inference: 1     # single-sample edge deployment; all latency/energy figures use this
+random_seeds: [0, 42, 123, 456, 789]
+train_val_test_split: [0.70, 0.15, 0.15]

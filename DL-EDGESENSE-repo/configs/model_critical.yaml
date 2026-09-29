@@ -1,0 +1,8 @@
+mode: critical
+embed_dim: 64
+depth_multiplier: 0.35
+precision: int8
+modalities: [imu, environmental]
+parameters_k: 168
+expected_energy_mj: 9.3
+expected_accuracy_pct: 82.1
