@@ -1,7 +1,7 @@
 """Fail if result literals are assigned in code (used by `make verify` and tests)."""
 import re, sys, pathlib
 BAD = re.compile(r"(?<![\w.])(51\.0|54\.1|92\.7|146\.0|138\.7|111\.0|128\.2|32\.5|24\.6|18\.7|91\.8|\b115\b)(?![\w.])")
-SKIP = {"tests", "legacy_unverified_figures", "paper_artifacts", "results", "measurements", "docs", "supplementary", ".git"}
+SKIP = {"tests", "paper_artifacts", "results", "measurements", "docs", "supplementary", ".git"}
 def scan(root="."):
     hits = []
     for p in pathlib.Path(root).rglob("*.py"):
