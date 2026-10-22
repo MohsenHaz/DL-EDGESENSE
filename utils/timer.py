@@ -1,0 +1,9 @@
+"""Timing utilities."""
+import time
+
+class Timer:
+    def __enter__(self):
+        self.start = time.perf_counter()
+        return self
+    def __exit__(self, *args):
+        self.elapsed_ms = (time.perf_counter() - self.start) * 1000
