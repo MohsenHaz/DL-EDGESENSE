@@ -1,0 +1,4 @@
+Approach,Stable High BW,Stable Low BW,Intermittent High BW,Intermittent Low BW,Offline Mode
+DL-EgSense,92.7,91.5,90.8,87.3,85.6
+DeepSense,91.5,87.2,78.5,65.7,58.3
+EdgeML,90.3,89.4,87.2,80.5,76.4

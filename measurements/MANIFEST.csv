@@ -1,0 +1,5 @@
+# One row per raw trace. Columns: file,platform,config,role,session,table
+# role: idle | inference | run24h ; config: mode name (high_energy|standard|energy_constrained|critical|recovery),
+#       baseline name, or ablation variant (full|no_eacma|no_hpeq|no_adaptive_sensing|no_energy_training|no_cross_modal_fusion|visual_only|acoustic_only|standard_attention)
+# Example (delete the leading '#'): rpi4b/idle.csv,rpi4b,idle,idle,0,all
+file,platform,config,role,session,table

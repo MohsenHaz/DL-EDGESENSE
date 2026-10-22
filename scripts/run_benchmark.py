@@ -1,10 +1,5 @@
-"""Benchmark against all baselines."""
+"""Benchmark against the retained baselines (results/baselines/*.json + measured energy)."""
 from src.evaluation.benchmark import print_comparison
 
-def main():
-    print("\n=== DL-EgSense vs Baselines ===")
-    print_comparison()
-    print("\nBaseline implementations in src/evaluation/baselines/")
-
 if __name__ == "__main__":
-    main()
+    print_comparison()

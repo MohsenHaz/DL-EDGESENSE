@@ -1,0 +1,4 @@
+method,accuracy_pct_at_25pct_energy_budget,source
+DL-EgSense,81.2,manuscript Section 4.6 text
+Once-for-All,68.3,manuscript Section 4.6 text
+DeepSense,55.2,manuscript Section 4.6 text

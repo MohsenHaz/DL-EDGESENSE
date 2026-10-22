@@ -1,0 +1,6 @@
+# Section 3.3 / 3.7, Eq (4)-(6), (12)
+allowed_bits: [1, 2, 4, 8, 16]
+context_dim: 8
+inference_precision:
+  baseline_comparisons: fp32
+  hpeq_configurations: int8

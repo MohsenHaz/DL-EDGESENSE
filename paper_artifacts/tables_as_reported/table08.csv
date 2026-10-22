@@ -1,0 +1,11 @@
+Metric / Mode,RPi 4B,Jetson Nano,High-Energy Mode,Standard Mode,Energy-Constrained,Critical Mode
+Energy per inference [mJ],54.1,44.3,54.1 mJ,32.5,18.7,9.3
+Energy per inference [J],0.0541,0.0443,0.0541 J,0.0325,0.0187,0.0093
+"Mean Power [mW, 24h run]",127.3,115.2,138.6,101.3,74.8,58.9
+"Peak of Windowed-Mean Power [mW, 24h run]",248.5,229.7,275.4,193.2,136.1,102.4
+"Mean In-Inference Power, E/latency [mW]†",470,1055,552,428,367,258
+Std. Dev. of Power [mW],42.7,38.9,51.2,34.8,26.4,20.7
+Energy Stability Index,0.873,0.891,0.841,0.899,0.921,0.937
+Inference Latency [ms],115,42,98,76,51,36
+Model Parameters [K],—,—,846,584,325,168
+Memory Usage [MB],—,—,74,52,28,15

@@ -1,0 +1,7 @@
+name: jetson_nano
+cpu: quad-core ARM Cortex-A57
+gpu: 128-core Maxwell
+ram_gb: 4
+governor: performance
+warmup_s: 60
+inference_repetitions: 100

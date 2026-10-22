@@ -1,0 +1,10 @@
+Method,Energy [mJ],Accuracy [%],Latency [ms],Memory [MB],FLOPs [M]
+DL-EgSense,54.1,92.7,115,85,135
+MobileNetV3 [25],73.4,89.2,98,62,35
+EfficientNet-B0,89.7,91.5,145,95,58
+EdgeBERT [48],67.2,88.3,122,78,41
+MicroNet [49],82.1,90.1,108,71,38
+DeepSense,146.0,91.5,285,174,125
+FBNet-C [50],78.9,89.7,134,88,52
+ProxylessNAS [51],85.3,90.8,156,92,61
+Once-for-All,91.2,91.2,167,103,67

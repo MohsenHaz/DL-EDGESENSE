@@ -1,0 +1,5 @@
+Approach,Inference Time [ms],,Memory [MB],,Throughput [inf/s],
+,RPi 4B,Jetson,RPi 4B,Jetson,RPi 4B,Jetson
+DL-EgSense,115,42,85,92,8.7,23.8
+DeepSense,285,98,174,183,3.5,10.2
+EdgeML,165,59,108,117,6.1,16.9

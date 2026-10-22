@@ -1,0 +1,4 @@
+Approach,Response Time [ms],Energy Reduction Achieved,Accuracy Preserved,Recovery Time [s],Adaptation Quality
+DL-EgSense,132,48.7%,94.3%,1.82,0.92
+DeepSense,N/A,12.4%,65.2%,N/A,0.28
+EdgeML,387,32.6%,77.8%,3.75,0.58

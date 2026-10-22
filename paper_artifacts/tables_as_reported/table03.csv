@@ -1,0 +1,7 @@
+Approach,Measured Energy/inference (mJ)†,Energy-Accuracy Ratio (Acc% per 10 mJ),Energy Savings vs DeepSense (%)
+DL-EgSense,54.1,17.1,62.9
+DeepSense [38],146.0,6.3,0.0
+MobileNetV3 [25],73.4,12.2,49.7
+EfficientNet-B0 [26],89.7,10.2,38.6
+EdgeML [24],128.2,5.9,12.2
+Once-for-All [30],91.2,10.0,37.5

@@ -1,20 +1,13 @@
-"""Large-scale evaluation — up to 100 simulated devices."""
-import torch
-from src.models.model_factory import create_model
-from src.utils.config_loader import load_config
-from data.sensor_simulation import simulate_all
+"""Large-scale (1000-device) scenario. Energy per device is taken from measured per-inference energy; no placeholders."""
+import numpy as np
+from src.evaluation.results_io import load_energy_summary, energy_mj
 
-def main(num_devices=100):
-    config = load_config("configs/standard_mode.yaml")
-    model = create_model(config).eval()
-    energies = []
-    with torch.no_grad():
-        for i in range(num_devices):
-            inputs = simulate_all(1)
-            model(inputs)
-            energies.append(51.0)  # placeholder from profiler
-    import numpy as np
-    print(f"{num_devices} devices — mean energy: {np.mean(energies):.1f} mJ")
+def main(platform="rpi4b", mode="standard", n_devices=1000, seed=0):
+    e = energy_mj(load_energy_summary(), platform, mode)          # raises MissingMeasurementError if not measured
+    sd = energy_mj(load_energy_summary(), platform, mode, "energy_mj_std")
+    rng = np.random.default_rng(seed)
+    per_dev = rng.normal(e, sd, n_devices).clip(min=0)
+    print(f"{n_devices} devices, mean {per_dev.mean():.2f} mJ, std {per_dev.std():.2f} mJ (sampled from measured distribution)")
 
 if __name__ == "__main__":
     main()

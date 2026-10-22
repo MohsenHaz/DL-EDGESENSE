@@ -1,0 +1,6 @@
+Operational Phase,Parameters [K],FLOPs [M],Memory [MB],Energy [mJ],Accuracy [%]
+High-Energy Mode,846,135,74,54.1,92.7
+Standard Mode,584,87,52,32.5,91.8
+Energy-Constrained,325,42,28,18.7,88.3
+Critical Mode,168,18,15,9.3,82.1
+Recovery Mode,412,58,34,24.6,89.5

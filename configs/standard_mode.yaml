@@ -1,4 +1,4 @@
-# Standard mode: 584K params, 32.5 mJ, 91.8% acc (Table 8)
+# Operating-mode configuration. Reported energy/F1 for this mode are NOT stored here; see claims.yaml and results/energy_summary.csv.
 defaults:
   - base_config
 model:

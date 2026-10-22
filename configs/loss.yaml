@@ -1,0 +1,7 @@
+# Section 3.8, Eq (15)-(18) / Table S2
+lambda_energy: 1.0        # grid search over [0.1, 5.0]
+lambda_complexity: 0.1    # grid search over [0.01, 0.5]
+beta_energy: 0.1          # peak accuracy at this value
+sigmoid_k: 10.0           # sharpness of soft-energy relaxation, Eq (18)
+tau: 0.5                  # threshold parameter, Eq (18)
+task_type: classification # classification (cross-entropy) | regression (MSE)

@@ -1,4 +1,4 @@
-# High-energy mode: 846K params, 48.2 mJ, 92.7% acc (Table 8)
+# Operating-mode configuration. Reported energy/F1 for this mode are NOT stored here; see claims.yaml and results/energy_summary.csv.
 defaults:
   - base_config
 model:

@@ -1,4 +1,4 @@
-# Critical mode: 168K params, 9.3 mJ, 82.1% acc (Table 8)
+# Operating-mode configuration. Reported energy/F1 for this mode are NOT stored here; see claims.yaml and results/energy_summary.csv.
 defaults:
   - base_config
 model:
