@@ -1,0 +1,10 @@
+# Every headline number in the manuscript, with the table it comes from and (when measured) the key that must match.
+claims:
+  - {id: C1, text: "DL-EgSense High-Energy energy per inference on RPi 4B [mJ]", value: 54.1, source: "Table 3/4/8/12", measured_key: "DL-EgSense", tol: 0.5}
+  - {id: C2, text: "Energy saving vs DeepSense, High-Energy mode [%]", value: 62.9, source: "Abstract, Table 3"}
+  - {id: C3, text: "Standard Mode energy [mJ]", value: 32.5, source: "Abstract, Table 8/12"}
+  - {id: C4, text: "Maximum saving vs DeepSense, Standard Mode [%]", value: 77.7, source: "Abstract, Conclusion"}
+  - {id: C5, text: "Weighted F1, High-Energy mode [%]", value: 92.7, source: "Abstract, Table 4, Table S1"}
+  - {id: C6, text: "Weighted F1, Standard mode [%]", value: 91.8, source: "Abstract, Table 12"}
+  - {id: C7, text: "Saving vs Once-for-All [%]", value: 40.7, source: "Contribution 4, Section 4.2"}
+  - {id: C8, text: "24-hour energy reduction vs DeepSense [%]", value: 62.8, source: "Table 7"}
