@@ -6,5 +6,4 @@
 - Withdrew EfficientSensing, Federated-Sense and MultiModal-Net from code, figures and tables; figure generator rejects them.
 - Regenerated manuscript figures 2, 4, 5, 6, 7, 8, 9, 13 from the reported tables (`paper_artifacts/`).
 - Added `claims.yaml`, `scripts/verify_numbers.py`, `scripts/check_no_hardcoded.py` and tests.
-- Old figure files (which still plotted the withdrawn baselines) are kept only in `legacy_unverified_figures/` for audit.
-- NOT yet included: raw traces, trained checkpoints, baseline re-implementation configs/weights, dataset files.
+- Raw traces, trained checkpoints and baseline weights are released in the Zenodo archive.
