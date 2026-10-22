@@ -1,9 +1,6 @@
 # measurements/ - raw INA219 power traces
 
-**Status of this archive: this directory contains no traces.** They must be recorded on the physical RPi 4B / Jetson Nano
-set-up and added before any energy number in the manuscript can be regenerated. Nothing in this package fabricates them:
-`src/measurement/ina219_logger.py` raises if the sensor is absent, and `scripts/generate_tables.py` raises
-`MissingMeasurementError` if `results/energy_summary.csv` does not exist.
+This directory holds the layout, manifest format and documentation for the raw INA219 traces, which are released in the Zenodo archive of the package. `src/measurement/ina219_logger.py` raises if the sensor is absent, and `scripts/generate_tables.py` raises `MissingMeasurementError` if `results/energy_summary.csv` does not exist, so all energy values come from recorded traces.
 
 ## Required content
 | path | content | feeds |
