@@ -38,7 +38,7 @@ class DLEgSense(nn.Module):
         # Sensor activation policy (Equations 2-3)
         self.activation_policy = nn.Linear(embed_dim * 5, 5)
 
-        # EACMA — core novel component (Equation 11)
+        # EACMA — energy-adaptive cross-modal attention (Equation 11)
         self.eacma = EACMA(embed_dim, num_heads, dropout)
 
         # Adaptive fusion (Section 3.7, Equation 13)

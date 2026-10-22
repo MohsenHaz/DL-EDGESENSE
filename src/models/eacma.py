@@ -5,9 +5,9 @@ Section 3.5, Equation 11.
 alpha_i^t = softmax( E_budget^t ⊙ W_energy ⊙ (Q_i K_j^T / sqrt(d_k))
                      + beta_energy * log(e_i^t) )
 
-Novel over standard attention: energy-feedback loop dynamically adjusts
+Energy-feedback loop dynamically adjusts
 attention weights based on real-time energy budget and per-modality consumption.
-Achieves 23% reduction in attention computation vs standard multi-head attention.
+The attention-computation saving versus standard multi-head attention is measured, not assumed (see scripts/run_ablation.py).
 """
 import torch
 import torch.nn as nn
