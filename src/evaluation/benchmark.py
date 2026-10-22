@@ -1,25 +1,16 @@
-"""Benchmark DL-EgSense against baselines (Tables 3, 4)."""
-from src.utils.logger import get_logger
-logger = get_logger(__name__)
+"""Baseline comparison built only from measured/aggregated results (no constants)."""
+from .results_io import load_energy_summary, load_json_dir, energy_mj
 
-BASELINE_ENERGY = {
-    "DeepSense":       146.0,
-    "EdgeML":          128.2,
-    "Federated-Sense": 138.7,
-    "EfficientSensing":111.0,
-    "DL-EgSense":       51.0,
-}
 
-BASELINE_F1 = {
-    "DeepSense":       91.5,
-    "EdgeML":          75.3,
-    "Federated-Sense": 84.5,
-    "EfficientSensing":89.7,
-    "DL-EgSense":      92.7,
-}
+def comparison(platform="rpi4b", results_dir="results/baselines", summary_path="results/energy_summary.csv"):
+    summary = load_energy_summary(summary_path)
+    rows = []
+    for r in load_json_dir(results_dir):          # one JSON per baseline: {"name","f1_weighted","latency_ms",...}
+        rows.append({"name": r["name"], "f1": r["f1_weighted"], "latency_ms": r.get("latency_ms"),
+                     "energy_mj": energy_mj(summary, platform, r["name"])})
+    return rows
 
-def print_comparison():
-    print(f"{'Model':<20} {'Energy (mJ)':>12} {'F1 (%)':>10} {'Ratio':>10}")
-    for m in BASELINE_ENERGY:
-        e = BASELINE_ENERGY[m]; f = BASELINE_F1[m]
-        print(f"{m:<20} {e:>12.1f} {f:>10.1f} {f**2/e:>10.2f}")
+
+def print_comparison(**kw):
+    for r in comparison(**kw):
+        print(f"{r['name']:<18} {r['energy_mj']:8.2f} mJ  F1={r['f1']:.1f}  lat={r['latency_ms']}")
